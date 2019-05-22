@@ -18,9 +18,9 @@ Vue.use(VueRouter)
 Vue.prototype.$axios = axios
 
 const routes = [
-  {path: '/AndroidPicVue',name: 'homeLink',component: Home},
-  {path: '/AndroidPicVue/album',name: 'albumLink',component: Album},
-  {path: '/AndroidPicVue/img',name: 'imgLink',component: Img},
+  {path: '/picVue',name: 'homeLink',component: Home},
+  {path: '/picVue/album',name: 'albumLink',component: Album},
+  {path: '/picVue/img',name: 'imgLink',component: Img},
 ]
 const router = new VueRouter({
   routes,
