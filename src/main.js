@@ -17,6 +17,8 @@ Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.prototype.$axios = axios
 
+Vue.prototype.theUrl = process.env.API_HOST;
+
 const routes = [
   {path: '/picVue',name: 'homeLink',component: Home},
   {path: '/picVue/album',name: 'albumLink',component: Album},

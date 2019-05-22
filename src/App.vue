@@ -27,6 +27,7 @@ export default {
     }
   },
   mounted() {
+    console.log(this.theUrl)
     if (performance.navigation.type == 1) {
       console.info("This page is reloaded");
       this.$router.push({name: 'homeLink'})

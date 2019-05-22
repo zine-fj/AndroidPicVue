@@ -35,7 +35,7 @@ export default {
     };
   },
   created() {
-    this.$axios.get("/api/v1/wallpaper/album").then(data => {
+    this.$axios.get(`${this.theUrl}v1/wallpaper/album`).then(data => {
       let _banners = data.data.res.banner;
       let _picMenus = data.data.res.album;
       _banners.forEach((item, index) => {

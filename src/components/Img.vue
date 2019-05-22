@@ -66,7 +66,7 @@ export default {
     getInfo(id, order, skip) {
       this.$axios
         .get(
-          `/api/v1/vertical/category/${id}/vertical?limit=${
+          `${this.theUrl}v1/vertical/category/${id}/vertical?limit=${
             this.limit
           }&order=${order}&skip=${skip}`
         )
@@ -86,7 +86,7 @@ export default {
       this.getInfo(this.id, this.order, this.skip);
     },
     getlistName() {
-      this.$axios.get("/api/v1/wallpaper/category").then(res => {
+      this.$axios.get(`${this.theUrl}v1/wallpaper/category`).then(res => {
         let _listName = res.data.res.category;
         _listName.forEach((item, index) => {
           this.listName.push(item.name);
@@ -96,7 +96,7 @@ export default {
     },
     handleClick(tab, event) {
       console.log(tab.index);
-      this.$axios.get("/api/v1/wallpaper/category").then(res => {
+      this.$axios.get(`${this.theUrl}v1/wallpaper/category`).then(res => {
         let _list = res.data.res.category;
         _list.forEach((item, index) => {
           if (index == tab.index) {

@@ -31,7 +31,7 @@ export default {
     };
   },
   created() {
-    this.$axios.get("/api/v1/wallpaper/category").then(res => {
+    this.$axios.get(`${this.theUrl}v1/wallpaper/category`).then(res => {
       let _picMenus = res.data.res.category;
       _picMenus.forEach((item, index) => {
         item.show = false;
