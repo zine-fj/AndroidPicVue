@@ -30,7 +30,7 @@ export default {
       picMenus: []
     };
   },
-  created() {
+  mounted() {
     this.$axios.get(`${this.theUrl}v1/wallpaper/category`).then(res => {
       let _picMenus = res.data.res.category;
       _picMenus.forEach((item, index) => {
@@ -72,9 +72,10 @@ export default {
 .pic-li {
   position: relative;
   height: auto;
+  width: 15%;
   margin: 5px;
   /* 如果一行有一个则一个撑满整行，如果有两个则两个撑满整行 */
-  flex-grow: 1;
+  /* flex-grow: 1; */
   /* 给每个20%的宽 */
   flex-basis: 15%;
   border-radius: 5px;
